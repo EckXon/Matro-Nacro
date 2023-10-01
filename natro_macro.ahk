@@ -581,6 +581,7 @@ config["Collect"] := {"ClockCheck":1
 	, "StingerSpiderCheck":1
 	, "StingerCloverCheck":1
 	, "StingerDailyBonusCheck":0
+	, "StingerHopCheck":0
 	, "NightLastDetected":1
 	, "VBLastKilled":1}
 
@@ -2237,12 +2238,13 @@ Gui, Font, s8 cDefault Norm, Tahoma
 Gui, Add, Checkbox, x217 y43 +BackgroundTrans vStingerCheck gnm_saveStingers Checked%StingerCheck% Disabled Hidden, Kill Vicious Bee
 Gui, Add, Checkbox, % "x315 y43 vStingerDailyBonusCheck gnm_saveStingers Checked" StingerDailyBonusCheck " Hidden Disabled" !StingerCheck, Only Daily Bonus
 Gui, Add, Text, x168 y69 +BackgroundTrans Hidden vTextFields, Fields:
-Gui, Add, Checkbox, % "x220 y62 vStingerCloverCheck gnm_saveStingers Checked" StingerCloverCheck " Hidden Disabled" !StingerCheck, Clover
-Gui, Add, Checkbox, % "x220 y80 vStingerSpiderCheck gnm_saveStingers Checked" StingerSpiderCheck " Hidden Disabled" !StingerCheck, Spider
-Gui, Add, Checkbox, % "x305 y62 vStingerCactusCheck gnm_saveStingers Checked" StingerCactusCheck " Hidden Disabled" !StingerCheck, Cactus
-Gui, Add, Checkbox, % "x305 y80 vStingerRoseCheck gnm_saveStingers Checked" StingerRoseCheck " Hidden Disabled" !StingerCheck, Rose
-Gui, Add, Checkbox, % "x390 y62 vStingerMountainTopCheck gnm_saveStingers Checked" StingerMountainTopCheck " Hidden Disabled" !StingerCheck, Mountain Top
-Gui, Add, Checkbox, % "x390 y80 vStingerPepperCheck gnm_saveStingers Checked" StingerPepperCheck " Hidden Disabled" !StingerCheck, Pepper
+Gui, Add, Checkbox, % "x200 y62 vStingerCloverCheck gnm_saveStingers Checked" StingerCloverCheck " Hidden Disabled" !StingerCheck, Lucky
+Gui, Add, Checkbox, % "x200 y80 vStingerSpiderCheck gnm_saveStingers Checked" StingerSpiderCheck " Hidden Disabled" !StingerCheck, Sticky
+Gui, Add, Checkbox, % "x260 y62 vStingerCactusCheck gnm_saveStingers Checked" StingerCactusCheck " Hidden Disabled" !StingerCheck, Spiky
+Gui, Add, Checkbox, % "x260 y80 vStingerRoseCheck gnm_saveStingers Checked" StingerRoseCheck " Hidden Disabled" !StingerCheck, Thorny
+Gui, Add, Checkbox, % "x320 y62 vStingerMountainTopCheck gnm_saveStingers Checked" StingerMountainTopCheck " Hidden Disabled" !StingerCheck, Hot Garbage
+Gui, Add, Checkbox, % "x320 y80 vStingerPepperCheck gnm_saveStingers Checked" StingerPepperCheck " Hidden Disabled" !StingerCheck, Spicy
+Gui, Add, Checkbox, % "x400 y80 vStingerHopCheck gnm_saveStingers Checked" StingerHopCheck " Hidden Disabled" !StingerCheck, Stinger Hop
 ;bosses
 Gui, Font, w700
 Gui, Add, GroupBox, x149 y104 w341 h126 vBossesGroupBox Hidden, Bosses
