@@ -1,4 +1,4 @@
-﻿/*
+/*
 Natro Macro (https://github.com/NatroTeam/NatroMacro)
 Copyright © 2022-2023 Natro Team (https://github.com/NatroTeam)
 
@@ -575,13 +575,13 @@ config["Collect"] := {"ClockCheck":1
 	, "LastCocoCrab":1
 	, "StingerCheck":0
 	, "StingerPepperCheck":1
+	, "StingerHopCheck":0
 	, "StingerMountainTopCheck":1
 	, "StingerRoseCheck":1
 	, "StingerCactusCheck":1
 	, "StingerSpiderCheck":1
 	, "StingerCloverCheck":1
 	, "StingerDailyBonusCheck":0
-	, "StingerHopCheck":0
 	, "NightLastDetected":1
 	, "VBLastKilled":1}
 
@@ -1827,7 +1827,7 @@ CurrentField:=FieldName%CurrentFieldNum%
 Gui, Font, w700
 Gui, Add, Text, x5 y241 w80 +left -Wrap +BackgroundTrans,Current Field:
 Gui, Add, Text, x177 y241 w30 +left +BackgroundTrans,Status:
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Button, x82 y240 w10 h15 gnm_currentFieldUp, <
 Gui, Add, Button, x165 y240 w10 h15 gnm_currentFieldDown, >
 Gui, Add, Text, x92 y240 w73 +center +BackgroundTrans +border vCurrentField,%CurrentField%
@@ -1878,7 +1878,7 @@ Gui, Add, Picture, % "+BackgroundTrans x" 195+2*w//3+w//5.4 " y262 w14 h16 gDona
 DllCall("DeleteObject", "ptr", hBM)
 Gdip_DisposeImage(bitmaps["paypalgui"])
 Gui, Add, Text, % "x" 195+2*w//3+w//5.4+20 " y263 gDonateLink vTextDonateLink", Donate
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 ;control buttons
 Gui, Add, Button, x5 y260 w65 h20 -Wrap vStartButton gstart, % " Start (" StartHotkey ")"
 Gui, Add, Button, x75 y260 w65 h20 -Wrap vPauseButton gpause, % " Pause (" PauseHotkey ")"
@@ -1893,7 +1893,7 @@ Gui, Add, Text, x0 y25 w117 +center +BackgroundTrans,Gathering
 Gui, Add, Text, x117 y25 w212 +center +BackgroundTrans,Pattern
 Gui, Add, Text, x323 y25 w87 +center +BackgroundTrans,Until
 Gui, Add, Text, x410 y25 w90 +center +BackgroundTrans,Sprinkler
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Text, x2 y39 w115 +center +BackgroundTrans,Field Rotation
 Gui, Add, Text, x117 y25 w1 h206 0x7 ; 0x7 = SS_BLACKFRAME - faster drawing of lines since no text rendered
 Gui, Add, Text, x122 y39 w112 +center +BackgroundTrans,Pattern Shape
@@ -1912,7 +1912,7 @@ Gui, Font, w700
 Gui, Add, Text, x4 y61 w10 +left +BackgroundTrans,1:
 Gui, Add, Text, xp yp+60 wp +left +BackgroundTrans,2:
 Gui, Add, Text, xp yp+60 wp +left +BackgroundTrans,3:
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, DropDownList, x18 y57 w96 vFieldName1 gnm_FieldSelect1 Disabled, % LTrim(StrReplace("|Bamboo|Blue Flower|Cactus|Clover|Coconut|Dandelion|Mountain Top|Mushroom|Pepper|Pine Tree|Pineapple|Pumpkin|Rose|Spider|Strawberry|Stump|Sunflower|", "|" FieldName1 "|", "|" FieldName1 "||"), "|")
 Gui, Add, DropDownList, xp yp+60 wp vFieldName2 gnm_FieldSelect2 Disabled, % LTrim(StrReplace("|None|Bamboo|Blue Flower|Cactus|Clover|Coconut|Dandelion|Mountain Top|Mushroom|Pepper|Pine Tree|Pineapple|Pumpkin|Rose|Spider|Strawberry|Stump|Sunflower|", "|" FieldName2 "|", "|" FieldName2 "||"), "|")
 Gui, Add, DropDownList, xp yp+60 wp vFieldName3 gnm_FieldSelect3 Disabled, % LTrim(StrReplace("|None|Bamboo|Blue Flower|Cactus|Clover|Coconut|Dandelion|Mountain Top|Mushroom|Pepper|Pine Tree|Pineapple|Pumpkin|Rose|Spider|Strawberry|Stump|Sunflower|", "|" FieldName3 "|", "|" FieldName3 "||"), "|")
@@ -1989,7 +1989,7 @@ page_end := nm_ContributorsImage()
 Gui, Font, w700
 Gui, Add, Text, x15 y28 w225 +wrap +backgroundtrans cWhite, Development
 Gui, Add, Text, x261 y28 w225 +wrap +backgroundtrans cWhite, Contributors
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Text, x18 y43 w225 +wrap +backgroundtrans cWhite, Special Thanks to the developers and testers!
 Gui, Add, Text, x264 y43 w180 +wrap +backgroundtrans cWhite, Thank you for your donations and contributions to this project!
 Gui, Add, Button, x440 y46 w18 h18 hwndhcleft gnm_ContributorsPageButton Disabled, <
@@ -2006,7 +2006,7 @@ Gui, Add, GroupBox, x170 y24 w160 h144, Calculators
 Gui, Add, GroupBox, x335 y24 w160 h84, Macro Tools
 Gui, Add, GroupBox, x335 y108 w160 h60, Discord Tools
 Gui, Add, GroupBox, x335 y168 w160 h62, Reporting
-Gui, Font, s9 cDefault Norm, Tahoma
+Gui, Font, s9 cDefault Norm, Comfortaa
 ;hive tools
 Gui, Add, Button, x10 y40 w150 h40 gnm_BasicEggHatcher, Gifted Basic Bee`nAuto-Hatcher
 Gui, Add, Button, x10 y82 w150 h40 gnm_BitterberryFeeder, Bitterberry`nAuto-Feeder
@@ -2026,7 +2026,7 @@ Gui, Add, Button, x340 y124 w150 h40 gnm_NightAnnouncementGUI, Night Detection`n
 ;reporting
 Gui, Add, Button, x340 y184 w150 h20 gnm_ReportBugButton, Report Bugs
 Gui, Add, Button, x340 y206 w150 h20 gnm_MakeSuggestionButton, Make Suggestions
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 
 ;STATUS TAB
 ;------------------------
@@ -2036,13 +2036,13 @@ Gui, Font, w700
 Gui, Add, GroupBox, x5 y23 w240 h210, Status Log
 Gui, Add, GroupBox, x250 y23 w245 h160, Stats
 Gui, Add, GroupBox, x250 y185 w245 h48, Discord Integration
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x85 y23 vStatusLogReverse gnm_StatusLogReverseCheck Checked%StatusLogReverse%, Reverse Order
 Gui, Add, Text, x10 y37 w230 r15 +BackgroundTrans -Wrap vstatuslog, Status Log:
 Gui, font, w700
 Gui, Add, Text, x255 y40, Total
 Gui, Add, Text, x375 y40, Session
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Text, x255 y55 w119 h120 -Wrap vTotalStats
 Gui, Add, Text, x375 y55 w119 h120 -Wrap vSessionStats
 Gui, Add, Button, x290 y39 w50 h15 vResetTotalStats gnm_ResetTotalStats, Reset
@@ -2067,7 +2067,7 @@ Gui, Add, GroupBox, x5 y95 w160 h65, HIVE SETTINGS
 Gui, Add, Text, x10 y110 w60 +left +BackgroundTrans,Hive Slot:
 Gui, Font, s6
 Gui, Add, Text, x61 y112 w60 +left +BackgroundTrans,(6-5-4-3-2-1)
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, DropDownList, x110 y105 w30 vHiveSlot gnm_saveConfig Disabled, % LTrim(StrReplace("|1|2|3|4|5|6|", "|" HiveSlot "|", "|" HiveSlot "||"), "|")
 Gui, Add, Text, x10 y125 w110 +left +BackgroundTrans,My Hive Has:
 Gui, Add, Edit, x75 y124 w18 h16 Limit2 number +BackgroundTrans vHiveBees gnm_HiveBees Disabled, %HiveBees%
@@ -2089,7 +2089,7 @@ Gui, Add, Edit, x280 y38 w47 h18 limit4 number vKeyDelayEdit gnm_saveKeyDelay
 Gui, Add, UpDown, Range0-9999 vKeyDelay gnm_saveKeyDelay Disabled, % KeyDelay
 Gui, Font, Underline
 Gui, Add, Text, x182 y58 w85 -Wrap c0x0046ee vAutoClickerButton, AutoClicker (%AutoClickerHotkey%)
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x267 y59 +BackgroundTrans vClickMode gnm_saveAutoClicker Checked%ClickMode%, Infinite
 Gui, Add, Text, x182 y77, Repeat
 Gui, Add, Edit, % "x221 y75 w64 h18 vClickCountEdit +BackgroundTrans gnm_saveAutoClicker Number Disabled" ClickMode
@@ -2109,11 +2109,11 @@ Gui, Add, Text, x196 y177 +BackgroundTrans, starting at
 Gui, Add, Edit, x250 y176 w18 h16 Number Limit2 vReconnectHour gnm_setReconnectHour, %ReconnectHour%
 Gui, font, w1000 s11
 Gui, Add, Text, x269 y173 +BackgroundTrans, :
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Edit, x275 y176 w18 h16 Number Limit2 vReconnectMin gnm_setReconnectMin, %ReconnectMin%
 Gui, font, s6 w700
 Gui, Add, Text, x295 y179 +BackgroundTrans, UTC
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Button, x315 y176 w10 h15 gnm_ReconnectTimeHelp, ?
 Gui, Add, CheckBox, x180 y195 w88 h15 vReconnectMessage gnm_saveConfig +BackgroundTrans Checked%ReconnectMessage%, Natro so broke
 hBM := Gdip_CreateHBITMAPFromBitmap(bitmaps["weary"])
@@ -2129,7 +2129,7 @@ Gui, Add, GroupBox, x335 y25 w160 h210, CHARACTER SETTINGS
 Gui, Add, Text, x345 y40 w110 +left +BackgroundTrans,Movement Speed:
 Gui, Font, s6
 Gui, Add, Text, x345 y55 w80 +right +BackgroundTrans,(WITHOUT HASTE)
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Edit, x438 y43 w43 r1 limit5 vMoveSpeedNum gnm_moveSpeed Disabled, %MoveSpeedNum%
 Gui, Add, CheckBox, x345 y68 w125 h15 vNewWalk gnm_saveConfig +BackgroundTrans Checked%NewWalk%, MoveSpeed Correction
 Gui, Add, Button, x475 y68 w10 h15 gnm_NewWalkHelp, ?
@@ -2159,7 +2159,7 @@ Gui, Add, Button, x250 y21 w246 h18 hwndhkill gnm_CollectKillButton, Kill
 ;collect
 Gui, Font, w700
 Gui, Add, GroupBox, x10 y42 w115 h109 vCollectGroupBox, Collect
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x15 y57 +BackgroundTrans vClockCheck gnm_saveCollect Checked%ClockCheck% Disabled, Clock (tickets)
 Gui, Add, Checkbox, x15 y76 +BackgroundTrans vMondoBuffCheck gnm_saveCollect Checked%MondoBuffCheck% Disabled, Mondo
 Gui, Add, DropDownList, x77 y72 w45 vMondoAction hwndhDDLMondo gnm_saveCollect Disabled, % LTrim(StrReplace(mondoactionlist := ("|Buff|Kill" (PMondoGuid ? "|Tag|Guid" : "") "|"), "|" MondoAction "|", "|" MondoAction "||"), "|")
@@ -2172,7 +2172,7 @@ Gui, Add, Checkbox, x15 y133 +BackgroundTrans vHoneystormCheck gnm_saveCollect C
 ;dispensers
 Gui, Font, w700
 Gui, Add, GroupBox, x130 y42 w170 h109 vDispensersGroupBox, Dispensers
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x135 y57 +BackgroundTrans vHoneyDisCheck gnm_saveCollect Checked%HoneyDisCheck% Disabled, Honey
 Gui, Add, Checkbox, x135 yp+19 +BackgroundTrans vTreatDisCheck gnm_saveCollect Checked%TreatDisCheck% Disabled, Treat
 Gui, Add, Checkbox, x135 yp+19 +BackgroundTrans vBlueberryDisCheck gnm_saveCollect Checked%BlueberryDisCheck% Disabled, Blueberry
@@ -2187,7 +2187,7 @@ if (beesmasActive = 0)
 
 Gui, Font, w700
 Gui, Add, GroupBox, x10 y153 w290 h84 vBeesmasGroupBox, % "Beesmas" (beesmasActive ? "" : " (Reserved)")
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 hBM := Gdip_CreateHBITMAPFromBitmap(bitmaps["beesmas"]) 
 Gui, Add, Picture, +BackgroundTrans x77 y150 w20 h20 vBeesmasImage, % (beesmasActive ? "HBITMAP:*" . hBM : "")
 DllCall("DeleteObject", "ptr", hBM)
@@ -2208,7 +2208,7 @@ Gui, Add, Checkbox, % "x201 yp+17 +BackgroundTrans vGummyBeaconCheck gnm_saveCol
 ;bugrun
 Gui, Font, w700
 Gui, Add, GroupBox, x10 y42 w134 h188 vBugRunGroupBox Hidden, Bug Run
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x76 y43 vBugRunCheck gnm_BugRunCheck Checked%BugRunCheck% Hidden, Select All
 Gui, Add, Text, x16 y62 +BackgroundTrans Hidden vTextMonsterRespawnPercent, % "–       %"
 Gui, Add, Text, x52 y55 w80 +BackgroundTrans +Center Hidden vTextMonsterRespawn, Monster Respawn Time
@@ -2234,7 +2234,7 @@ Gui, Add, Checkbox, xp yp+18 +BackgroundTrans vBugrunWerewolfCheck gnm_saveColle
 ;stingers
 Gui, Font, w700
 Gui, Add, GroupBox, x149 y42 w341 h60 vStingersGroupBox Hidden, Stingers
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x217 y43 +BackgroundTrans vStingerCheck gnm_saveStingers Checked%StingerCheck% Disabled Hidden, Kill Vicious Bee
 Gui, Add, Checkbox, % "x315 y43 vStingerDailyBonusCheck gnm_saveStingers Checked" StingerDailyBonusCheck " Hidden Disabled" !StingerCheck, Only Daily Bonus
 Gui, Add, Text, x168 y69 +BackgroundTrans Hidden vTextFields, Fields:
@@ -2244,11 +2244,12 @@ Gui, Add, Checkbox, % "x260 y62 vStingerCactusCheck gnm_saveStingers Checked" St
 Gui, Add, Checkbox, % "x260 y80 vStingerRoseCheck gnm_saveStingers Checked" StingerRoseCheck " Hidden Disabled" !StingerCheck, Thorny
 Gui, Add, Checkbox, % "x320 y62 vStingerMountainTopCheck gnm_saveStingers Checked" StingerMountainTopCheck " Hidden Disabled" !StingerCheck, Hot Garbage
 Gui, Add, Checkbox, % "x320 y80 vStingerPepperCheck gnm_saveStingers Checked" StingerPepperCheck " Hidden Disabled" !StingerCheck, Spicy
-Gui, Add, Checkbox, % "x400 y80 vStingerHopCheck gnm_saveStingers Checked" StingerHopCheck " Hidden Disabled" !StingerCheck, Stinger Hop
+Gui, Add, Checkbox, % "x410 y71 vStingerHopCheck gnm_saveStingers Checked" StingerHopCheck " Hidden Disabled" !StingerCheck, Stinger Hop
+
 ;bosses
 Gui, Font, w700
 Gui, Add, GroupBox, x149 y104 w341 h126 vBossesGroupBox Hidden, Bosses
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Button, x209 y104 w12 h14 gnm_BossConfigHelp vBossConfigHelp Hidden, ?
 Gui, Add, Checkbox, x152 y123 +BackgroundTrans vKingBeetleCheck gnm_saveCollect Checked%KingBeetleCheck% Disabled Hidden, King Beetle
 Gui, Add, Checkbox, xp yp+21 +BackgroundTrans vTunnelBearCheck gnm_saveCollect Checked%TunnelBearCheck% Disabled Hidden, Tunnel Bear
@@ -2303,7 +2304,7 @@ Gui, Tab, Boost
 Gui, Font, W700
 Gui, Add, GroupBox, x5 y25 w120 h135, HQ Field Boosters
 Gui, Add, GroupBox, x130 y25 w260 h155, Hotbar Slots
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 ;field booster
 Gui, Add, Text, x25 y40 w100 left +BackgroundTrans, Order
 Gui, Add, Text, x95 y35 w100 left cGREEN +BackgroundTrans, (free)
@@ -2342,7 +2343,7 @@ Loop, 6
 nm_HotbarWhile()
 Gui, Add, Button, x20 y200 w90 h30 vAutoFieldBoostButton gnm_autoFieldBoostButton, % (AutoFieldBoostActive ? "Auto Field Boost`n[ON]" : "Auto Field Boost`n[OFF]")
 Gui, Font, w700
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 PostMessage, 0x5555, 65, 0, , ahk_pid %lp_PID%
 
 ;QUEST TAB
@@ -2358,7 +2359,7 @@ Gui, Add, GroupBox, x160 y131 w165 h108, Brown Bear
 Gui, Add, Text, x165 y145 cRED, Not Yet Implemented
 Gui, Add, GroupBox, x330 y23 w165 h108, Bucko Bee
 Gui, Add, GroupBox, x330 y131 w165 h108, Riley Bee
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, x80 y23 vPolarQuestCheck gnm_savequest Checked%PolarQuestCheck%, Enable
 Gui, Add, Checkbox, x15 y37 vPolarQuestGatherInterruptCheck gnm_savequest Checked%PolarQuestGatherInterruptCheck%, Allow Gather Interrupt
 Gui, Add, Text, x8 y51 w145 h78 vPolarQuestProgress, % StrReplace(PolarQuestProgress, "|", "`n")
@@ -2378,7 +2379,7 @@ Gui, Add, Checkbox, x410 y131 vRileyQuestCheck gnm_RileyQuestCheck Checked%Riley
 Gui, Add, Checkbox, x340 y145 vRileyQuestGatherInterruptCheck gnm_RileyQuestCheck Checked%RileyQuestGatherInterruptCheck%, Allow Gather Interrupt
 Gui, Add, Text, x333 y159 w158 h78 vRileyQuestProgress, % StrReplace(RileyQuestProgress, "|", "`n")
 Gui, Font, w700
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 PostMessage, 0x5555, 70, 0, , ahk_pid %lp_PID%
 
 ;PLANTERS TAB
@@ -2450,7 +2451,7 @@ Gui, Add, Text, % "x250 y195 w100 h20 +Center +BackgroundTrans vTextZone3" ((Pla
 Gui, Add, Text, % "x375 y61 w100 h20 +Center +BackgroundTrans vTextZone4" ((PlanterMode = 2) ? "" : " Hidden"), -- 15 bee zone --
 Gui, Add, Text, % "x375 y128 w100 h20 +Center +BackgroundTrans vTextZone5" ((PlanterMode = 2) ? "" : " Hidden"), -- 25 bee zone --
 Gui, Add, Text, % "x375 y153 w100 h20 +Center +BackgroundTrans vTextZone6" ((PlanterMode = 2) ? "" : " Hidden"), -- 35 bee zone --
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 Gui, Add, Checkbox, % "x260 y72 vDandelionFieldCheck gba_saveConfig_ Checked" DandelionFieldCheck ((PlanterMode = 2) ? "" : " Hidden"), Dandelion (COM)
 Gui, Add, Checkbox, % "x260 y86 vSunflowerFieldCheck gba_saveConfig_ Checked" SunflowerFieldCheck ((PlanterMode = 2) ? "" : " Hidden"), Sunflower (SAT)
 Gui, Add, Checkbox, % "x260 y100 vMushroomFieldCheck gba_saveConfig_ Checked" MushroomFieldCheck ((PlanterMode = 2) ? "" : " Hidden"), Mushroom (MOT)
@@ -2473,7 +2474,7 @@ Gui, Font, s7
 Gui, Add, Checkbox, % "x364 y200 w126 h13 vConvertFullBagHarvest gba_saveConfig_ Checked" ConvertFullBagHarvest ((PlanterMode = 2) ? "" : " Hidden"), Convert Full Bag Harvest
 Gui, Add, Checkbox, % "x364 y216 w126 h13 vGatherPlanterLoot gba_saveConfig_ Checked" GatherPlanterLoot ((PlanterMode = 2) ? "" : " Hidden"), Gather Planter Loot
 
-Gui, Font, s8 cDefault Norm, Tahoma
+Gui, Font, s8 cDefault Norm, Comfortaa
 PostMessage, 0x5555, 80, 0, , ahk_pid %lp_PID%
 ;Manual Planters Start
 
@@ -3315,13 +3316,13 @@ nm_AdvancedGUI(init:=0){
 	local hBM
 	GuiControl, , Tab, Advanced
 	Gui, Tab, Advanced
-	Gui, Font, s8 cDefault Norm, Tahoma
+	Gui, Font, s8 cDefault Norm, Comfortaa
 	Gui, Font, w700
 	Gui, Add, GroupBox, x5 y24 w240 h90, Fallback Private Servers
 	Gui, Add, GroupBox, x5 y114 w240 h46, Advanced Tools
 	Gui, Add, GroupBox, x255 y24 w240 h38, Debugging
 	Gui, Add, GroupBox, x255 y62 w240 h168, Test Paths/Patterns
-	Gui, Font, s8 cDefault Norm, Tahoma
+	Gui, Font, s8 cDefault Norm, Comfortaa
 	;reconnect
 	Gui, Add, Text, x15 y44, 3 Fails:
 	Gui, Add, Edit, x55 y42 w180 h18 +BackgroundTrans vFallbackServer1 gnm_ServerLink, %FallbackServer1%
@@ -4542,6 +4543,7 @@ nm_saveStingers(hCtrl){
 		for i,v in fields
 			GuiControl, %c%, Stinger%v%Check
 		GuiControl, %c%, StingerDailyBonusCheck
+		GuiControl, %c%, StingerHopCheck
 	}
 }
 nm_saveAmulet(hCtrl){
@@ -6967,7 +6969,7 @@ nm_AutoStartManager(){
 	Gui, Add, Button, x130 y160 w110 h24 gAddButton, Add
 
 	Gui, Add, GroupBox, x5 y190 w240 h54, New Task Settings
-	Gui, Font, s8 cDefault Norm, Tahoma
+	Gui, Font, s8 cDefault Norm, Comfortaa
 	Gui, Add, CheckBox, x15 y208 Checked vAutoStartCheck, Start Macro On Run
 	Gui, Add, CheckBox, x15 y224 Checked vAdminCheck, Run Macro As Admin
 	Gui, Add, Text, x140 y205 w100 +Center, Delay Before Start:
@@ -7384,7 +7386,7 @@ nm_ContributorsPageButton(hwnd){
 nm_CollectKillButton(hCtrl){
 	global
 	static CollectControls := ["CollectGroupBox","DispensersGroupBox","BeesmasGroupBox","BeesmasImage","ClockCheck","MondoBuffCheck","MondoAction","AntPassCheck","AntPassAction","RoboPassCheck","HoneystormCheck","HoneyDisCheck","TreatDisCheck","BlueberryDisCheck","StrawberryDisCheck","CoconutDisCheck","RoyalJellyDisCheck","GlueDisCheck","BeesmasGatherInterruptCheck","StockingsCheck","WreathCheck","FeastCheck","RBPDelevelCheck","GingerbreadCheck","SnowMachineCheck","CandlesCheck","SamovarCheck","LidArtCheck","GummyBeaconCheck"]
-	, KillControls := ["BugRunGroupBox","BugRunCheck","MonsterRespawnTime","TextMonsterRespawnPercent","TextMonsterRespawn","MonsterRespawnTimeHelp","BugrunInterruptCheck","TextLoot","TextKill","TextLineBugRun1","TextLineBugRun2","BugrunLadybugsLoot","BugrunRhinoBeetlesLoot","BugrunSpiderLoot","BugrunMantisLoot","BugrunScorpionsLoot","BugrunWerewolfLoot","BugrunLadybugsCheck","BugrunRhinoBeetlesCheck","BugrunSpiderCheck","BugrunMantisCheck","BugrunScorpionsCheck","BugrunWerewolfCheck","StingersGroupBox","StingerCheck","StingerDailyBonusCheck","TextFields","StingerCloverCheck","StingerSpiderCheck","StingerCactusCheck","StingerRoseCheck","StingerMountainTopCheck","StingerPepperCheck","BossesGroupBox","TunnelBearCheck","KingBeetleCheck","CocoCrabCheck","StumpSnailCheck","CommandoCheck","TunnelBearBabyCheck","KingBeetleBabyCheck","BabyLovePicture1","BabyLovePicture2","KingBeetleAmuletMode","ShellAmuletMode","KingBeetleAmuPicture","ShellAmuPicture","KingBeetleAmuletModeText","ShellAmuletModeText","ChickLevelTextLabel","ChickLevelText","ChickLevel","SnailHPText","SnailHealthEdit","SnailHealthText","ChickHPText","ChickHealthEdit","ChickHealthText","SnailTimeText","SnailTimeUpDown","ChickTimeText","ChickTimeUpDown","BossConfigHelp"]
+	, KillControls := ["BugRunGroupBox","BugRunCheck","MonsterRespawnTime","TextMonsterRespawnPercent","TextMonsterRespawn","MonsterRespawnTimeHelp","BugrunInterruptCheck","TextLoot","TextKill","TextLineBugRun1","TextLineBugRun2","BugrunLadybugsLoot","BugrunRhinoBeetlesLoot","BugrunSpiderLoot","BugrunMantisLoot","BugrunScorpionsLoot","BugrunWerewolfLoot","BugrunLadybugsCheck","BugrunRhinoBeetlesCheck","BugrunSpiderCheck","BugrunMantisCheck","BugrunScorpionsCheck","BugrunWerewolfCheck","StingersGroupBox","StingerCheck","StingerDailyBonusCheck","TextFields","StingerCloverCheck","StingerSpiderCheck","StingerCactusCheck","StingerRoseCheck","StingerMountainTopCheck","StingerPepperCheck","StingerHopCheck", "BossesGroupBox","TunnelBearCheck","KingBeetleCheck","CocoCrabCheck","StumpSnailCheck","CommandoCheck","TunnelBearBabyCheck","KingBeetleBabyCheck","BabyLovePicture1","BabyLovePicture2","KingBeetleAmuletMode","ShellAmuletMode","KingBeetleAmuPicture","ShellAmuPicture","KingBeetleAmuletModeText","ShellAmuletModeText","ChickLevelTextLabel","ChickLevelText","ChickLevel","SnailHPText","SnailHealthEdit","SnailHealthText","ChickHPText","ChickHealthEdit","ChickHealthText","SnailTimeText","SnailTimeUpDown","ChickTimeText","ChickTimeUpDown","BossConfigHelp"]
 
 	p := (hCtrl = hKill)
 	GuiControl, % (p ? "Enable" : "Disable"), % hCollect
@@ -15331,17 +15333,19 @@ nm_ViciousCheck(){
 	return killed
 }
 nm_locateVB(){
-	global VBState, StingerCheck, StingerDailyBonusCheck, StingerPepperCheck, StingerMountainTopCheck, StingerRoseCheck, StingerCactusCheck, StingerSpiderCheck, StingerCloverCheck, NightLastDetected, VBLastKilled, FwdKey, LeftKey, BackKey, RightKey, RotLeft, RotRight, RotDown, RotUp, ZoomOut, MoveMethod, objective, DisableToolUse, CurrentAction, PreviousAction
+	global VBState, StingerCheck, StingerDailyBonusCheck, StingerPepperCheck, StingerHopCheck, StingerMountainTopCheck, StingerRoseCheck, StingerCactusCheck, StingerSpiderCheck, StingerCloverCheck, NightLastDetected, VBLastKilled, FwdKey, LeftKey, BackKey, RightKey, RotLeft, RotRight, RotDown, RotUp, ZoomOut, MoveMethod, objective, DisableToolUse, CurrentAction, PreviousAction
 
 	Prev_DetectHiddenWindows := A_DetectHiddenWindows
 	Prev_TitleMatchMode := A_TitleMatchMode
 	DetectHiddenWindows On
 	SetTitleMatchMode 2
 	; must set these back to prev before returning
-
+	if (StingerHopCheck) {
+		VBState:=1
+	}
 	time := nowUnix()
 	; don't run if stinger check disabled, VB last killed less than 5m ago, night last detected more than 5m ago
-	if ((StingerCheck=0) || (time-VBLastKilled)<300 || ((time-NightLastDetected)>300 || (time-NightLastDetected)<0) || (VBState = 0)) {
+	if ((StingerCheck=0) || ((time-VBLastKilled)<300 || ((time-NightLastDetected)>300 || (time-NightLastDetected)<0)) && (StingerHopCheck = 0) || (VBState = 0) ) {
 		VBState:=0
 		;send VBState to background.ahk
 		if WinExist("background.ahk ahk_class AutoHotkey")
@@ -15384,6 +15388,9 @@ nm_locateVB(){
 		if killed {
 			VarSetCapacity(duration,256),DllCall("GetDurationFormatEx","str","!x-sys-default-locale","uint",0,"ptr",0,"int64",(nowUnix() - startBattle)*10000000,"wstr","mm:ss","str",duration,"int",256)
 			nm_setStatus("Defeated", "Vicious Bee`nTime: " duration)
+			if (StingerHopCheck = 1) {
+				nm_ForceReconnect(300)
+			}
 		}
 		VBState:=0 ;0=no VB, 1=searching for VB, 2=VB found
 		if WinExist("background.ahk ahk_class AutoHotkey")
@@ -15404,7 +15411,7 @@ nm_locateVB(){
 			if ((findImg := nm_imgSearch("nightsky.png", 50, "abovebuff"))[1] = 0)
 				break
 		}
-		if(findImg[1]=0){
+		if(findImg[1]=0 || StingerHopCheck=1){
 			;night confirmed, proceed!
 			nm_setStatus("Starting", "Vicious Bee Cycle")
 			sendinput {%RotLeft% 3}{%RotUp% 3}
@@ -15698,8 +15705,12 @@ nm_locateVB(){
 	VBState:=0 ;0=no VB, 1=searching for VB, 2=VB found
 	if WinExist("background.ahk ahk_class AutoHotkey")
 		PostMessage, 0x5554, 3, VBState
+	
 	DetectHiddenWindows %Prev_DetectHiddenWindows%  ; Restore original setting for the caller.
 	SetTitleMatchMode %Prev_TitleMatchMode%         ; Same.
+	if (StingerHopCheck=0) {
+		nm_ForceReconnect(300)
+	}
 	return
 }
 nm_hotbar(boost:=0){
